@@ -46,7 +46,7 @@ st.markdown("Select a digit from 0 to 9.")
 
 digit = st.slider("Select a digit", 0, 9, 0)
 
-if st.button("Generar imágenes"):
+if st.button("Generate images"):
     imgs = generate_images(digit)
     cols = st.columns(5)
     for i, col in enumerate(cols):
