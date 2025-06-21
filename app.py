@@ -41,10 +41,10 @@ def generate_images(digit):
     return outputs
 
 # Interfaz de usuario
-st.title("🧠 Generador de Dígitos Manuscritos")
-st.markdown("Selecciona un número del 0 al 9 y genera 5 imágenes similares pero diferentes.")
+st.title("Digit generator")
+st.markdown("Select a digit from 0 to 9.")
 
-digit = st.slider("Selecciona un dígito", 0, 9, 0)
+digit = st.slider("Select a digit", 0, 9, 0)
 
 if st.button("Generar imágenes"):
     imgs = generate_images(digit)
