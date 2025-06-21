@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import tflite_runtime.interpreter as tflite
-from tensorflow.keras.datasets import mnist  # solo para cargar imágenes
+from keras.datasets import mnist
 
 # Función para cargar modelo tflite
 @st.cache_resource
