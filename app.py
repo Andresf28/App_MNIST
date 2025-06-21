@@ -33,6 +33,8 @@ def generate_images(digit):
         idx = np.random.randint(0, len(images))
         img = np.expand_dims(images[idx], axis=0)
         z = encoder.predict(img)
+         if isinstance(z, (list, tuple)):
+            z = z[-1]
         z_noisy = z + np.random.normal(0, 0.3, size=z.shape)
         decoded = decoder.predict(z_noisy)
         decoded_img = decoded.reshape(28, 28)
